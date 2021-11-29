@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import {Route, Routes} from 'react-router';
+
+// Custom Theme
+import theme from './theme/theme';
+import {ThemeProvider} from '@mui/material/styles';
+
+// Components
+import Header from './components/Header';
+
+// CSS
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <main>App Works!</main>
+    </ThemeProvider>
   );
 }
-
-export default App;

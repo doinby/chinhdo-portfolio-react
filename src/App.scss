@@ -1,0 +1,33 @@
+@import './theme//mixins.scss';
+
+@font-face {
+  font-family: 'MinigapLight';
+  src: local('MinigapLight'),
+    url('./theme/fonts/MinigapLight.woff') format('woff'),
+    url('./theme/fonts/MinigapLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'MinigapBold';
+  src: local('MinigapBold'),
+    url('./theme/fonts/MinigapBold.woff') format('woff'),
+    url('./theme/fonts/MinigapBold.woff2') format('woff2');
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+
+  #root {
+    @include flex(column);
+    height: 100%;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+}
