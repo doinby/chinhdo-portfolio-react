@@ -16,6 +16,14 @@ import {
 import {Box} from '@mui/system';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
+import htmlIcon from '../images/dev-tools/html-5.svg';
+import cssIcon from '../images/dev-tools/css-3.svg';
+import javascriptIcon from '../images/dev-tools/javascript.svg';
+import figmaIcon from '../images/dev-tools/figma.svg';
+import sassIcon from '../images/dev-tools/sass.svg';
+import reactIcon from '../images/dev-tools/react.svg';
+import unityIcon from '../images/dev-tools/unity.svg';
+
 import './Hero.css';
 
 export default function Hero() {
@@ -24,11 +32,8 @@ export default function Hero() {
       <Card
         className='profile-card'
         sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          paddingY: 8,
-          paddingX: 8,
+          paddingY: 6,
+          // paddingX: 6,
           gap: 2,
         }}
       >
@@ -38,12 +43,12 @@ export default function Hero() {
           sx={{width: 'auto', height: 250}}
         />
         <CardContent sx={{maxWidth: '60%'}}>
-          <Box className='intro-paragraph'>
+          <Typography className='intro-paragraph' paragraph='true'>
             <Typography>
-              Hi, I'm base in a little city called Sydney from the{' '}
-              <span className='down-under'>🦘Downunder 🌏</span>
+              Hi, I'm Chinh. I'm base in a little city called Sydney from the{' '}
+              <span id='down-under'>🦘Downunder 🌏</span>
             </Typography>
-            <Typography paragraph={true}>
+            <Typography>
               As a
               <Typography variant='jobTitle' color='primary' sx={{mx: 1}}>
                 Front-end Developer
@@ -52,24 +57,39 @@ export default function Hero() {
               feedback I get from the audience about my design. I'm passionate
               about developing the highest quality ReactJS products.
             </Typography>
-          </Box>
+          </Typography>
           <Box>
             <Typography>
               Tech I
               <FavoriteOutlinedIcon
+                id='favourite-icon'
                 color='primary'
-                sx={{position: 'absolute', ml: 0.25}}
+                sx={{ml: 0.25}}
               />
-              <Typography
-                component='span'
-                sx={{position: 'absolute', ml: 3.25}}
-              >
+              <Typography component='span' sx={{ml: 3.25}}>
                 :
               </Typography>
             </Typography>
 
-            <List>
-              <ListItem>Js</ListItem>
+            <List id='my-tools' sx={{gap: 1.5, mt: 2}}>
+              <ListItem>
+                <img src={javascriptIcon} alt='Javascript Icon' />
+              </ListItem>
+              <ListItem>
+                <img src={reactIcon} alt='React Icon' />
+              </ListItem>
+              {/* <ListItem>
+                <img src={cssIcon} alt='CSS Icon' />
+              </ListItem> */}
+              <ListItem>
+                <img src={sassIcon} alt='Sass Icon' />
+              </ListItem>
+              <ListItem>
+                <img src={figmaIcon} alt='Figma Icon' />
+              </ListItem>
+              <ListItem>
+                <img src={unityIcon} alt='Unity Icon' />
+              </ListItem>
             </List>
           </Box>
         </CardContent>
