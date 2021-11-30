@@ -21,13 +21,23 @@ import './Hero.css';
 export default function Hero() {
   return (
     <Container id='hero-section' component='section' sx={{marginY: 8}}>
-      <Card className='profile-card' sx={{paddingY: 8, paddingX: 8, gap: 2}}>
+      <Card
+        className='profile-card'
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          paddingY: 8,
+          paddingX: 8,
+          gap: 2,
+        }}
+      >
         <CardMedia
           component='img'
           image={profilePicture}
-          sx={{height: 250, width: 'auto'}}
+          sx={{width: 'auto', height: 250}}
         />
-        <CardContent>
+        <CardContent sx={{maxWidth: '60%'}}>
           <Box className='intro-paragraph'>
             <Typography>
               Hi, I'm base in a little city called Sydney from the{' '}

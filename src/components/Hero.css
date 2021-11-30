@@ -1,12 +1,3 @@
-div.profile-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
 div.profile-card span.down-under {
   display: inline-block;
   -webkit-transform: scale(1, -1);

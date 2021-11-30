@@ -1,7 +1,8 @@
 @import '../../src/theme/mixins.scss';
 
 div.profile-card {
-  @include flex(row);
+  // @include flex(row);
+  // flex-wrap: wrap;
 
   span.down-under {
     display: inline-block;
