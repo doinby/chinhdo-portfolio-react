@@ -2,13 +2,14 @@
 
 header {
   @include flex(row);
-  place-content: center;
-  gap: 1.5em;
-  padding: 0.75rem 0;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 
-  a.MuiLink-underlineHover {
-    text-underline-offset: 0.3em;
-    text-decoration-thickness: 0.25em !important;
+  h1.MuiTypography-h1 {
+    font-size: 1.5rem;
+  }
+
+  ul.MuiList-root {
+    @include flex(row);
   }
 }

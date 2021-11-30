@@ -9,7 +9,6 @@
 body {
   margin: 0;
   height: 100vh;
-  font-family: "MinigapLight";
 }
 body #root {
   display: -webkit-box;
@@ -30,4 +29,3 @@ body footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-/*# sourceMappingURL=App.css.map */
