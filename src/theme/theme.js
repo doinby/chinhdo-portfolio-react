@@ -12,28 +12,27 @@ import '../App.css';
 let theme = createTheme({
   palette: {
     type: 'light',
-    // primary: {
-    //   main: '#FD510C',
-    // },
-    // secondary: {
-    //   main: '#129277',
-    // },
-    // info: {
-    //   main: '#FFAABE',
-    // },
-    // error: {
-    //   main: '#ff1744',
-    // },
-    // warning: {
-    //   main: '#ff9800',
-    // },
-    // success: {
-    //   main: '#129277',
-    // },
+    primary: {
+      main: '#FD510C',
+    },
+    secondary: {
+      main: '#129277',
+    },
+    info: {
+      main: '#FFAABE',
+    },
+    error: {
+      main: '#ff1744',
+    },
+    warning: {
+      main: '#ff9800',
+    },
+    success: {
+      main: '#129277',
+    },
     divider: 'rgba(253,81,12,0.4)',
   },
   typography: {
-    fontFamily: 'MinigapLight',
     h1: {
       fontFamily: 'MinigapBold',
       fontSize: '3.25rem',
@@ -50,6 +49,11 @@ let theme = createTheme({
     body1: {
       fontFamily: 'MinigapLight',
       letterSpacing: 0.75,
+    },
+    jobTitle: {
+      fontFamily: 'MinigapBold',
+      fontSize: '2rem',
+      color: 'primary',
     },
   },
   components: {

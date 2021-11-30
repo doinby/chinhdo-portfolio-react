@@ -10,12 +10,18 @@ import Header from './components/Header';
 
 // CSS
 import './App.css';
+import {Container} from '@mui/material';
+import Hero from './components/Hero';
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <main>App Works!</main>
+      <Container fixed sx={{fontFamily: 'MinigapLight'}}>
+        <Header />
+        <main>
+          <Hero />
+        </main>
+      </Container>
     </ThemeProvider>
   );
 }
