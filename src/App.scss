@@ -25,6 +25,10 @@ body {
 
   main {
     flex: 1 0 auto;
+
+    section.MuiContainer-root {
+      padding: 0;
+    }
   }
 
   footer {
