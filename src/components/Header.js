@@ -3,12 +3,12 @@ import React from 'react';
 import {Link as RouterLink} from 'react-router-dom';
 
 import {Link, MenuItem, MenuList, Typography} from '@mui/material';
+import {Box} from '@mui/system';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 
 import './Header.css';
-import {Box} from '@mui/system';
 
 export default function Header() {
   return (
