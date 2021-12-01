@@ -5,10 +5,6 @@ header {
   align-items: center;
   justify-content: space-between;
 
-  h1.MuiTypography-h1 {
-    font-size: 1.35rem;
-  }
-
   ul.MuiList-root {
     @include flex(row);
   }

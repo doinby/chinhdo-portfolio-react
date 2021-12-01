@@ -13,9 +13,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header h1.MuiTypography-h1 {
-  font-size: 1.35rem;
-}
 header ul.MuiList-root {
   display: -webkit-box;
   display: -ms-flexbox;

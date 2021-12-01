@@ -12,8 +12,14 @@ import './Header.css';
 
 export default function Header() {
   return (
-    <Box component='header'>
-      <Typography variant='h1'>doinby</Typography>
+    <Box component='header' sx={{paddingY: 1}}>
+      <Typography
+        variant='h1'
+        color='primary'
+        sx={{fontSize: '1.5rem !important'}}
+      >
+        doinby.co
+      </Typography>
       <MenuList>
         <MenuItem>
           <Link to='/' component={RouterLink} underline='hover'>

@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import MyTools from './MyTools';
 
-import profilePicture from '../../src/images/profile-picture-300.png';
-
+// MUI components
 import {
   Card,
   CardContent,
@@ -13,8 +13,9 @@ import {
 import {Box} from '@mui/system';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
+// Media & CSS
+import profilePicture from '../../src/images/profile-picture-300.png';
 import './Hero.css';
-import MyTools from './MyTools';
 
 export default function Hero(props) {
   const {config, id} = props;
@@ -35,7 +36,7 @@ export default function Hero(props) {
           sx={{width: 'auto', height: 250}}
         />
         <CardContent sx={{maxWidth: '60%'}}>
-          <Typography className='intro-paragraph' paragraph='true'>
+          <Box className='intro-paragraph' paragraph='true'>
             <Typography>
               Hi, I'm Chinh. I'm base in a little city called Sydney from the{' '}
               <span id='down-under'>🦘Downunder 🌏</span>
@@ -49,7 +50,7 @@ export default function Hero(props) {
               feedback I get from the audience about my design. I'm passionate
               about developing the highest quality ReactJS products.
             </Typography>
-          </Typography>
+          </Box>
           <Box>
             <Typography>
               Tech I

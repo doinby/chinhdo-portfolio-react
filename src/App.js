@@ -17,7 +17,7 @@ import Projects from './components/Projects';
 export default function App() {
   const sectionConfig = {
     component: 'section',
-    sx: {marginY: 8},
+    sx: {marginY: 12, display: 'inline-block'},
   };
 
   return (
