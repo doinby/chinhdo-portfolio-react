@@ -19,18 +19,4 @@ div.profile-card {
   svg#favourite-icon {
     position: absolute;
   }
-
-  ul#my-tools {
-    @include flex(row);
-    padding: 0;
-
-    li.MuiListItem-root {
-      padding: 0;
-      width: auto;
-    }
-
-    img {
-      height: 36px;
-    }
-  }
 }

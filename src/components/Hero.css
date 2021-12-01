@@ -20,20 +20,3 @@ div.profile-card span#down-under {
 div.profile-card svg#favourite-icon {
   position: absolute;
 }
-div.profile-card ul#my-tools {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding: 0;
-}
-div.profile-card ul#my-tools li.MuiListItem-root {
-  padding: 0;
-  width: auto;
-}
-div.profile-card ul#my-tools img {
-  height: 36px;
-}

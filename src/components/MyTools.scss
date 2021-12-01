@@ -1,0 +1,24 @@
+@import '../../src/theme/mixins.scss';
+
+ul#my-tools {
+  @include flex(row);
+  padding: 0;
+
+  li.MuiListItem-root {
+    padding: 0;
+    width: auto;
+
+    img {
+      max-width: 36px;
+      max-height: 36px;
+    }
+  }
+
+  ul#more-tools {
+    flex-direction: row;
+
+    img#jquery-fix-width {
+      max-width: 100px;
+    }
+  }
+}

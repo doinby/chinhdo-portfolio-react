@@ -15,6 +15,7 @@ import {
 } from '@mui/material';
 import {Box} from '@mui/system';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import {ArrowDropDownCircleOutlined} from '@mui/icons-material';
 
 import htmlIcon from '../images/dev-tools/html-5.svg';
 import cssIcon from '../images/dev-tools/css-3.svg';
@@ -23,8 +24,10 @@ import figmaIcon from '../images/dev-tools/figma.svg';
 import sassIcon from '../images/dev-tools/sass.svg';
 import reactIcon from '../images/dev-tools/react.svg';
 import unityIcon from '../images/dev-tools/unity.svg';
+import sketchIcon from '../images/dev-tools/sketch.svg';
 
 import './Hero.css';
+import MyTools from './MyTools';
 
 export default function Hero() {
   return (
@@ -33,7 +36,6 @@ export default function Hero() {
         className='profile-card'
         sx={{
           paddingY: 6,
-          // paddingX: 6,
           gap: 2,
         }}
       >
@@ -70,27 +72,7 @@ export default function Hero() {
                 :
               </Typography>
             </Typography>
-
-            <List id='my-tools' sx={{gap: 1.5, mt: 2}}>
-              <ListItem>
-                <img src={javascriptIcon} alt='Javascript Icon' />
-              </ListItem>
-              <ListItem>
-                <img src={reactIcon} alt='React Icon' />
-              </ListItem>
-              {/* <ListItem>
-                <img src={cssIcon} alt='CSS Icon' />
-              </ListItem> */}
-              <ListItem>
-                <img src={sassIcon} alt='Sass Icon' />
-              </ListItem>
-              <ListItem>
-                <img src={figmaIcon} alt='Figma Icon' />
-              </ListItem>
-              <ListItem>
-                <img src={unityIcon} alt='Unity Icon' />
-              </ListItem>
-            </List>
+            <MyTools />
           </Box>
         </CardContent>
       </Card>
