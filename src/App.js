@@ -12,14 +12,21 @@ import Header from './components/Header';
 import './App.css';
 import {Container} from '@mui/material';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
 
 export default function App() {
+  const sectionConfig = {
+    component: 'section',
+    sx: {marginY: 8},
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Container fixed sx={{fontFamily: 'MinigapLight'}}>
         <Header />
         <main>
-          <Hero />
+          <Hero config={sectionConfig} id='hero-section' />
+          <Projects config={sectionConfig} id='projects-section' />
         </main>
       </Container>
     </ThemeProvider>

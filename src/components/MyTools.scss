@@ -1,5 +1,7 @@
 @import '../../src/theme/mixins.scss';
 
+$svgSize: 32px;
+
 ul#my-tools {
   @include flex(row);
   padding: 0;
@@ -9,8 +11,8 @@ ul#my-tools {
     width: auto;
 
     img {
-      max-width: 36px;
-      max-height: 36px;
+      max-width: $svgSize;
+      max-height: $svgSize;
     }
   }
 
@@ -18,7 +20,7 @@ ul#my-tools {
     flex-direction: row;
 
     img#jquery-fix-width {
-      max-width: 100px;
+      max-width: 84px;
     }
   }
 }
