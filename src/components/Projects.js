@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {Container, Typography} from '@mui/material';
 import {Box} from '@mui/system';
 
-import MyRepo from './MyRepo';
+import Repository from './Repository/Repository';
 
 import './Projects.css';
 
@@ -36,7 +36,7 @@ export default function Projects(props) {
     <Container id={id} component={component} sx={sx}>
       <Typography variant='h2'>Projects I've worked on</Typography>
       <Box className='my-repo-container'>
-        {!isLoading ? <MyRepo data={projectStg} /> : 'loading'}
+        {!isLoading ? <Repository data={projectStg} /> : 'loading'}
       </Box>
     </Container>
   );

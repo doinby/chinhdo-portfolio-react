@@ -5,7 +5,6 @@ import {Typography} from '@mui/material';
 import {yellow, purple, pink, red} from '@mui/material/colors';
 
 export default function RepoLanguages(props) {
-  //   console.log(props.languages);
   const {languages} = props;
 
   function getLanguageColor(name) {
