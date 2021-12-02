@@ -4,15 +4,15 @@ import React from 'react';
 // Custom Theme
 import theme from './theme/theme';
 import {ThemeProvider} from '@mui/material/styles';
+import {Container} from '@mui/material';
 
 // Components
 import Header from './components/Header';
+import Hero from './components/Hero';
+import Projects from './components/Projects';
 
 // CSS
 import './App.css';
-import {Container} from '@mui/material';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
 
 export default function App() {
   const sectionConfig = {

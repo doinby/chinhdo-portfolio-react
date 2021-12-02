@@ -55,6 +55,10 @@ let theme = createTheme({
       fontSize: '2rem',
       color: 'primary',
     },
+    repoLanguages: {
+      fontFamily: 'MinigapBold',
+      textTransformation: 'uppercase',
+    },
   },
   components: {
     MuiCssBaseline: {
