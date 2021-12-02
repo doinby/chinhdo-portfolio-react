@@ -11,6 +11,7 @@ import unityIcon from '../../src/images/dev-tools/unity.svg';
 import materialuiIcon from '../../src/images/dev-tools/material-ui.svg';
 import jqueryIcon from '../../src/images/dev-tools/jquery.svg';
 import tailwindcssIcon from '../../src/images/dev-tools/tailwindcss.svg';
+import cssIcon from '../../src/images/dev-tools/css-3.svg';
 import firebaseIcon from '../../src/images/dev-tools/firebase.svg';
 
 import './MyTools.css';
@@ -47,6 +48,9 @@ export default function MyTools() {
         id='more-tools'
         sx={{display: isHidden ? 'none' : 'flex', paddingY: 0, gap: 1.5}}
       >
+        <ListItem>
+          <img src={cssIcon} alt='CSS Icon' />
+        </ListItem>
         <ListItem>
           <img src={sassIcon} alt='Sass Icon' />
         </ListItem>
