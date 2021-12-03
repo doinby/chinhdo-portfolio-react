@@ -1,17 +1,28 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react';
 
-import {Card, CardContent, Typography} from '@mui/material';
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Typography,
+  Button,
+  Divider,
+} from '@mui/material';
 import {Box} from '@mui/system';
 
 import RepoLanguages from './RepositoryLanguage';
+import RepositoryTitle from './RepositoryTitle';
 
 import './Repository.css';
 
 export default function Repository(props) {
-  const {id, name, description, html_url, homepage, updated_at, languages_url} =
+  const {name, description, html_url, homepage, updated_at, languages_url} =
     props.data;
   // console.log(props.data);
+
+  const githubUrl = html_url;
+  const homepageUrl = homepage;
 
   const [languages, setLanguages] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -25,25 +36,39 @@ export default function Repository(props) {
       });
   }, [languages_url]);
 
-  function getUpdatedDate(string) {
-    const dateArray = string.split('-');
-    const year = dateArray[0];
-    const month = dateArray[1];
-    const date = dateArray[2].slice(0, 2);
-
-    const newDate = date + '-' + month + '-' + year;
-    return newDate;
-  }
-
   return (
-    <Card sx={{width: '40%'}}>
-      <CardContent>
+    <Card sx={{width: '40%', p: 4}}>
+      <CardContent
+        className='repository-container'
+        // sx={{placeContent: 'center'}}
+      >
+        <RepositoryTitle
+          title={name}
+          url={githubUrl}
+          updatedDate={updated_at}
+        />
         <Typography sx={{mb: 4}}>
-          {description === null ? 'Description coming soon!' : description}
+          {description === null ? `🛠 I'm working on it... 😊 🛠` : description}
         </Typography>
-        <Box id='repo-languages' sx={{gap: 1}}>
+        <Box
+          className='repository-language-container'
+          sx={{mb: 8, gap: 2, flexWrap: 'wrap'}}
+        >
           {isLoading ? 'Loading...' : <RepoLanguages languages={languages} />}
         </Box>
+        <Divider sx={{mb: 4}} />
+        <CardActions
+          className='button-container'
+          sx={{
+            paddingX: 0,
+            placeSelf: 'center',
+            justifyContent: 'space-evenly',
+            alignItems: 'space-evenly',
+          }}
+        >
+          <Button variant='contained'>Github</Button>
+          <Button variant='contained'>Homepage</Button>
+        </CardActions>
       </CardContent>
     </Card>
   );

@@ -25,7 +25,7 @@ export default function RepoLanguages(props) {
         <Typography
           key={name}
           color={getLanguageColor(name)}
-          variant='repoLanguages'
+          variant='repositoryLanguage'
           sx={{textTransform: 'uppercase'}}
         >
           {name}

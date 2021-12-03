@@ -45,6 +45,12 @@ let theme = createTheme({
     h3: {
       fontFamily: 'MinigapBold',
       letterSpacing: 1,
+      fontSize: '1rem',
+    },
+    h4: {
+      fontFamily: 'MinigapBold',
+      letterSpacing: 1,
+      fontSize: '1rem',
     },
     body1: {
       fontFamily: 'MinigapLight',
@@ -55,8 +61,12 @@ let theme = createTheme({
       fontSize: '2rem',
       color: 'primary',
     },
-    repoLanguages: {
+    repositoryLanguage: {
       fontFamily: 'MinigapBold',
+      textTransformation: 'uppercase',
+    },
+    repositoryDate: {
+      // fontFamily: 'MinigapBold',
       textTransformation: 'uppercase',
     },
   },

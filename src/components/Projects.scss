@@ -1,6 +1,5 @@
 @import '../../src/theme/mixins.scss';
 
-div.my-repo-container {
+div.repositories-container {
   @include flex(row);
-  flex-wrap: wrap;
 }

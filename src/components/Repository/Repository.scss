@@ -1,6 +1,13 @@
-@import '../../src/theme/mixins.scss';
+@import '../../../src/theme/mixins.scss';
 
-div#repo-languages {
-  @include flex(row);
-  flex-wrap: wrap;
+div.repository-container {
+  @include flex(column);
+
+  div.repository-language-container {
+    @include flex(row);
+  }
+
+  div.repository-title-container {
+    @include flex(column);
+  }
 }

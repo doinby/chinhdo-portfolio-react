@@ -35,7 +35,7 @@ export default function Projects(props) {
   return (
     <Container id={id} component={component} sx={sx}>
       <Typography variant='h2'>Projects I've worked on</Typography>
-      <Box className='my-repo-container'>
+      <Box className='repositories-container' sx={{gap: 2, flexWrap: 'wrap'}}>
         {!isLoading ? <Repository data={projectStg} /> : 'loading'}
       </Box>
     </Container>

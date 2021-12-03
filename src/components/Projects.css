@@ -1,4 +1,4 @@
-div.my-repo-container {
+div.repositories-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,6 +6,4 @@ div.my-repo-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
