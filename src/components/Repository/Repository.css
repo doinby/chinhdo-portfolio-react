@@ -7,7 +7,9 @@ div.repository-container {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-div.repository-container div.repository-language-container {
+div.repository-container div.repository-language-container,
+div.repository-container div.title-links,
+div.repository-container div.button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

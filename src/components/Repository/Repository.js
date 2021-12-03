@@ -10,10 +10,16 @@ import {
   Divider,
 } from '@mui/material';
 import {Box} from '@mui/system';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+// Icons
+import HomeIcon from '@mui/icons-material/Home';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import RepoLanguages from './RepositoryLanguage';
 import RepositoryTitle from './RepositoryTitle';
 
+import theme from '../../theme/theme';
 import './Repository.css';
 
 export default function Repository(props) {
@@ -27,6 +33,8 @@ export default function Repository(props) {
   const [languages, setLanguages] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
+  const isIpadScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   useEffect(() => {
     fetch(languages_url)
       .then((response) => response.json())
@@ -37,11 +45,8 @@ export default function Repository(props) {
   }, [languages_url]);
 
   return (
-    <Card sx={{width: '40%', p: 4}}>
-      <CardContent
-        className='repository-container'
-        // sx={{placeContent: 'center'}}
-      >
+    <Card sx={{width: isIpadScreen ? '100%' : '40%', p: 4}}>
+      <CardContent className='repository-container'>
         <RepositoryTitle
           title={name}
           url={githubUrl}
@@ -62,12 +67,27 @@ export default function Repository(props) {
           sx={{
             paddingX: 0,
             placeSelf: 'center',
+            width: '100%',
             justifyContent: 'space-evenly',
             alignItems: 'space-evenly',
           }}
         >
-          <Button variant='contained'>Github</Button>
-          <Button variant='contained'>Homepage</Button>
+          <Button
+            href={homepageUrl}
+            target='_blank'
+            variant='contained'
+            startIcon={<HomeIcon />}
+          >
+            Homepage
+          </Button>
+          <Button
+            href={githubUrl}
+            target='_blank'
+            variant='contained'
+            startIcon={<GitHubIcon />}
+          >
+            Github
+          </Button>
         </CardActions>
       </CardContent>
     </Card>

@@ -5,6 +5,7 @@ import {Box} from '@mui/system';
 
 export default function RepositoryTitle(props) {
   const {title, updatedDate, url} = props;
+  const githubPageUrl = 'https://github.com/doinby';
 
   function getUpdatedDate(string) {
     const dateArray = string.split('-');
@@ -18,9 +19,15 @@ export default function RepositoryTitle(props) {
 
   return (
     <Box className='repository-title-container' sx={{mb: 4, gap: 4}}>
-      <Link href={url} target='_blank' variant='h4'>
-        {title}
-      </Link>
+      <Box className='title-links'>
+        <Link href={githubPageUrl} target='_blank' variant='h4'>
+          doinby
+        </Link>
+        <Typography sx={{marginX: 1}}>/</Typography>
+        <Link href={url} target='_blank' variant='h4'>
+          {title}
+        </Link>
+      </Box>
       <Typography variant='repositoryDate'>
         Updated on: {getUpdatedDate(updatedDate)}
       </Typography>

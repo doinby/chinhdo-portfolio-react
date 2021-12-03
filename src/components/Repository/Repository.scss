@@ -3,7 +3,9 @@
 div.repository-container {
   @include flex(column);
 
-  div.repository-language-container {
+  div.repository-language-container,
+  div.title-links,
+  div.button-container {
     @include flex(row);
   }
 
