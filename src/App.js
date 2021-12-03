@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Route, Routes} from 'react-router';
 
 // Custom Theme
 import theme from './theme/theme';
@@ -9,7 +8,7 @@ import {Container} from '@mui/material';
 // Components
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
+import Projects from './components/Projects/Projects';
 
 // CSS
 import './App.css';
