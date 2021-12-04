@@ -1,9 +1,9 @@
-@import '../../src/theme/mixins.scss';
+@import '../../../src/theme/mixins.scss';
 
 section#projects-section {
   @include flex(column);
 }
 
-div.repositories-container {
+div.projects-container {
   @include flex(row);
 }

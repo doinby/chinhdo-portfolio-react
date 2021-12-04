@@ -8,7 +8,7 @@ section#projects-section {
           flex-direction: column;
 }
 
-div.repositories-container {
+div.projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -13,7 +13,7 @@ export default function RepositoryTitle(props) {
     const month = dateArray[1];
     const date = dateArray[2].slice(0, 2);
 
-    const newDate = date + '-' + month + '-' + year;
+    const newDate = date + '/' + month + '/' + year;
     return newDate;
   }
 
