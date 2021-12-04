@@ -1,8 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from 'react';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
-import {Card, CardContent} from '@mui/material';
+import {Card} from '@mui/material';
 
 import theme from '../../theme/theme';
 import Repository from './Repository/Repository';
@@ -29,11 +28,9 @@ export default function Project(props) {
     <Card
       key={id}
       id={'project-card' + id}
-      sx={{width: isIpadScreen ? '100%' : '40%', p: 4}}
+      sx={{width: isIpadScreen ? '100%' : '30%', p: 6}}
     >
-      <CardContent>
-        {!isLoading ? <Repository data={githubData} /> : 'Loading...'}
-      </CardContent>
+      <>{!isLoading ? <Repository data={githubData} /> : 'Loading...'}</>
     </Card>
   );
 }

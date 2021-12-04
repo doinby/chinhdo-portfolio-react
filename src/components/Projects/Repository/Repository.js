@@ -22,7 +22,6 @@ import './Repository.css';
 export default function Repository(props) {
   const {name, description, html_url, homepage, updated_at, languages_url} =
     props.data;
-  // console.log(props.data);
 
   const githubUrl = html_url;
   const homepageUrl = homepage;
@@ -40,7 +39,7 @@ export default function Repository(props) {
   }, [languages_url]);
 
   return (
-    <CardContent className='repository-container'>
+    <CardContent className='repository-container' sx={{p: 0, m: 0}}>
       <RepositoryTitle title={name} url={githubUrl} updatedDate={updated_at} />
       <Typography sx={{mb: 4}}>
         {description === null ? `🛠 I'm working on it... 😊 🛠` : description}

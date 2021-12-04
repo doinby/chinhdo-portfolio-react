@@ -2,8 +2,8 @@
 
 div.profile-card {
   @include flex(row);
-  flex-wrap: wrap;
-  place-content: center;
+  // flex-wrap: wrap;
+  // place-content: center;
 
   span#down-under {
     display: inline-block;

@@ -26,8 +26,10 @@ export default function Hero(props) {
       <Card
         className='profile-card'
         sx={{
-          paddingY: 6,
+          padding: 6,
           gap: 2,
+          flexWrap: 'wrap',
+          placeContent: 'center',
         }}
       >
         <CardMedia
