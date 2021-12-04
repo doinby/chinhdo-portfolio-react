@@ -1,4 +1,4 @@
-div.profile-card {
+div#profile-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,17 +6,54 @@ div.profile-card {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   place-content: center;
+  place-items: center;
 }
-div.profile-card span#down-under {
+div#profile-card div#profile-card-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100%;
+}
+div#profile-card span#down-under {
   display: inline-block;
   -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
   text-transform: uppercase;
   font-family: "MinigapBold";
 }
-div.profile-card svg#favourite-icon {
+div#profile-card svg#favourite-icon {
   position: absolute;
+}
+
+ul#my-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+}
+ul#my-tools li.MuiListItem-root {
+  padding: 0;
+  width: auto;
+}
+ul#my-tools li.MuiListItem-root img {
+  max-width: 32px;
+  max-height: 32px;
+}
+ul#my-tools ul#more-tools {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+ul#my-tools ul#more-tools img#jquery-fix-width {
+  max-width: 84px;
 }

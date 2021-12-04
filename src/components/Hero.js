@@ -2,7 +2,8 @@
 import React from 'react';
 import MyTools from './MyTools';
 
-// MUI components
+// MUI Components
+import {Box} from '@mui/system';
 import {
   Card,
   CardContent,
@@ -10,7 +11,6 @@ import {
   Container,
   Typography,
 } from '@mui/material';
-import {Box} from '@mui/system';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
 // Media & CSS
@@ -18,18 +18,17 @@ import profilePicture from '../../src/images/profile-picture-300.png';
 import './Hero.css';
 
 export default function Hero(props) {
-  const {config, id} = props;
+  const {config, id, isIpadScreenLess} = props;
   const {component, sx} = config;
 
   return (
     <Container id={id} component={component} sx={sx}>
       <Card
-        className='profile-card'
+        id='profile-card'
         sx={{
+          flexWrap: isIpadScreenLess ? 'wrap' : 'none',
           padding: 6,
-          gap: 2,
-          flexWrap: 'wrap',
-          placeContent: 'center',
+          gap: 4,
         }}
       >
         <CardMedia
@@ -37,12 +36,12 @@ export default function Hero(props) {
           image={profilePicture}
           sx={{width: 'auto', height: 250}}
         />
-        <CardContent sx={{maxWidth: '60%'}}>
+        <CardContent id='profile-card-detail' sx={{gap: 4}}>
+          <Typography>
+            Hi, I'm Chinh. I'm base in a little city called Sydney from the{' '}
+            <span id='down-under'>🦘Downunder 🌏</span>
+          </Typography>
           <Box className='intro-paragraph' paragraph='true'>
-            <Typography>
-              Hi, I'm Chinh. I'm base in a little city called Sydney from the{' '}
-              <span id='down-under'>🦘Downunder 🌏</span>
-            </Typography>
             <Typography>
               As a
               <Typography variant='jobTitle' color='primary' sx={{mx: 1}}>

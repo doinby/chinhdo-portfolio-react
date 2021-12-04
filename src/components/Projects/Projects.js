@@ -18,7 +18,7 @@ export default function Projects(props) {
   const {component, sx} = config;
 
   return (
-    <Container id={id} component={component} sx={{...sx, gap: 6}}>
+    <Container id={id} component={component} sx={sx}>
       <Typography variant='h2'>Projects I've worked on:</Typography>
       <Box
         className='projects-container'
@@ -27,7 +27,7 @@ export default function Projects(props) {
         <Project projectData={speedTypingGame} />
         <Project projectData={currencyConversion} />
         <Project projectData={readyRedP} />
-        <Project projectData={foodGiving} />
+        {/* <Project projectData={foodGiving} /> */}
       </Box>
     </Container>
   );

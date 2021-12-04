@@ -14,13 +14,11 @@ import tailwindcssIcon from '../../src/images/dev-tools/tailwindcss.svg';
 import cssIcon from '../../src/images/dev-tools/css-3.svg';
 import firebaseIcon from '../../src/images/dev-tools/firebase.svg';
 
-import './MyTools.css';
-
 export default function MyTools() {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <List id='my-tools' sx={{gap: 1.5, mt: 1}}>
+    <List id='my-tools' sx={{gap: 2, mt: 1}}>
       <ListItem>
         <img src={javascriptIcon} alt='Javascript Icon' />
       </ListItem>
@@ -43,30 +41,30 @@ export default function MyTools() {
         >
           Show more...
         </Link>
-      </ListItem>
-      <List
-        id='more-tools'
-        sx={{display: isHidden ? 'none' : 'flex', paddingY: 0, gap: 1.5}}
-      >
-        <ListItem>
-          <img src={cssIcon} alt='CSS Icon' />
-        </ListItem>
-        <ListItem>
-          <img src={sassIcon} alt='Sass Icon' />
-        </ListItem>
-        <ListItem>
-          <img src={tailwindcssIcon} alt='Tailwindcss Icon' />
-        </ListItem>
-        <ListItem>
-          <img src={jqueryIcon} alt='Jquery Icon' id='jquery-fix-width' />
-        </ListItem>
-        {/* <ListItem>
+        <List
+          id='more-tools'
+          sx={{display: isHidden ? 'none' : 'flex', paddingY: 0, gap: 2}}
+        >
+          {/* <ListItem>
+            <img src={cssIcon} alt='CSS Icon' />
+          </ListItem> */}
+          <ListItem>
+            <img src={sassIcon} alt='Sass Icon' />
+          </ListItem>
+          <ListItem>
+            <img src={tailwindcssIcon} alt='Tailwindcss Icon' />
+          </ListItem>
+          <ListItem>
+            <img src={jqueryIcon} alt='Jquery Icon' id='jquery-fix-width' />
+          </ListItem>
+          {/* <ListItem>
           <img src={firebaseIcon} alt='Firebase Icon' />
         </ListItem> */}
-        <ListItem>
-          <img src={unityIcon} alt='Unity Icon' />
-        </ListItem>
-      </List>
+          <ListItem>
+            <img src={unityIcon} alt='Unity Icon' />
+          </ListItem>
+        </List>
+      </ListItem>
     </List>
   );
 }
