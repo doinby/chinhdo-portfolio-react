@@ -4,6 +4,10 @@ section#projects-section {
   @include flex(column);
 }
 
-div.projects-container {
+ul.projects-container {
   @include flex(row);
+  li {
+    display: block;
+    width: auto;
+  }
 }

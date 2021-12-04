@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 
-import {Container, Typography} from '@mui/material';
-import {Box} from '@mui/system';
+import {Container, List, ListItem, Typography} from '@mui/material';
 
 import Project from './Project';
 import {
@@ -14,21 +13,27 @@ import {
 import './Projects.css';
 
 export default function Projects(props) {
-  const {config, id} = props;
-  const {component, sx} = config;
+  const {configs, id} = props;
+  const {component, sx} = configs;
 
   return (
     <Container id={id} component={component} sx={sx}>
       <Typography variant='h2'>Projects I've worked on:</Typography>
-      <Box
+      <List
         className='projects-container'
         sx={{gap: 8, flexWrap: 'wrap', placeContent: 'center'}}
       >
-        <Project projectData={speedTypingGame} />
-        <Project projectData={currencyConversion} />
-        <Project projectData={readyRedP} />
+        <ListItem>
+          <Project projectData={speedTypingGame} />
+        </ListItem>
+        <ListItem>
+          <Project projectData={currencyConversion} />
+        </ListItem>
+        <ListItem>
+          <Project projectData={readyRedP} />
+        </ListItem>
         {/* <Project projectData={foodGiving} /> */}
-      </Box>
+      </List>
     </Container>
   );
 }

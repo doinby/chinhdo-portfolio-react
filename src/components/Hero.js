@@ -18,8 +18,8 @@ import profilePicture from '../../src/images/profile-picture-300.png';
 import './Hero.css';
 
 export default function Hero(props) {
-  const {config, id, isIpadScreenLess} = props;
-  const {component, sx} = config;
+  const {configs, id, isIpadScreenLess} = props;
+  const {component, sx} = configs;
 
   return (
     <Container id={id} component={component} sx={sx}>

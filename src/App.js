@@ -15,11 +15,16 @@ import Projects from './components/Projects/Projects';
 
 // CSS
 import './App.css';
+import Footer from './components/Footer';
 
 export default function App() {
   const isIpadScreenLess = useMediaQuery(theme.breakpoints.down('md'));
 
-  const sectionConfig = {
+  const headerFooterConfigs = {
+    sx: {marginY: 6},
+  };
+
+  const sectionConfigs = {
     component: 'section',
     sx: {marginY: 8, display: 'inline-block'},
   };
@@ -27,15 +32,16 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container fixed sx={{fontFamily: 'MinigapLight'}}>
-        <Header />
+        <Header configs={headerFooterConfigs} />
         <main>
           <Hero
-            config={sectionConfig}
+            configs={sectionConfigs}
             id='hero-section'
             isIpadScreenLess={isIpadScreenLess}
           />
-          <Projects config={sectionConfig} id='projects-section' />
+          <Projects configs={sectionConfigs} id='projects-section' />
         </main>
+        <Footer configs={headerFooterConfigs} />
       </Container>
     </ThemeProvider>
   );
