@@ -5,7 +5,6 @@ import defaultTheme from '../src/theme/theme';
 import {ThemeProvider} from '@mui/material/styles';
 
 // MUI Components
-import {createTheme} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Container, CssBaseline} from '@mui/material';
 
