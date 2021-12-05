@@ -5,8 +5,8 @@ import {Card} from '@mui/material';
 import Repository from './Repository/Repository';
 
 export default function Project(props) {
-  const {projectData} = props;
-  const {id, path} = projectData;
+  const {id, path} = props;
+  console.log('path:', path);
 
   const BASE_URL = 'https://api.github.com/repos/doinby';
 

@@ -1,19 +1,9 @@
-export const speedTypingGame = {
-  id: 0,
-  path: '/speed-typing-game-react',
-};
+const projectDatas = [
+  '/speed-typing-game-react',
+  '/currency-conversion-react',
+  '/ready-red-p-driving-school',
+  '/FCC-FoodGiving',
+  '/google-keep-scrimba',
+];
 
-export const currencyConversion = {
-  id: 1,
-  path: '/currency-conversion-react',
-};
-
-export const readyRedP = {
-  id: 2,
-  path: '/ReadyRedP-DrivingSchool',
-};
-
-export const foodGiving = {
-  id: 3,
-  path: '/FCC-FoodGiving',
-};
+export default projectDatas;

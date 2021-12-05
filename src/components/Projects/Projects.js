@@ -4,12 +4,7 @@ import React from 'react';
 import {Container, List, ListItem, Typography} from '@mui/material';
 
 import Project from './Project';
-import {
-  speedTypingGame,
-  currencyConversion,
-  readyRedP,
-  foodGiving,
-} from './projectDatas';
+import projectDatas from './projectDatas';
 import './Projects.css';
 
 export default function Projects(props) {
@@ -23,16 +18,11 @@ export default function Projects(props) {
         className='projects-container'
         sx={{gap: 8, flexWrap: 'wrap', placeContent: 'center'}}
       >
-        <ListItem>
-          <Project projectData={speedTypingGame} />
-        </ListItem>
-        <ListItem>
-          <Project projectData={currencyConversion} />
-        </ListItem>
-        <ListItem>
-          <Project projectData={readyRedP} />
-        </ListItem>
-        {/* <Project projectData={foodGiving} /> */}
+        {projectDatas.map((path, index) => (
+          <ListItem key={index}>
+            <Project key={index} id={index} path={path} />
+          </ListItem>
+        ))}
       </List>
     </Container>
   );
