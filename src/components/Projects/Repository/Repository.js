@@ -18,8 +18,15 @@ import RepoLanguages from './RepositoryLanguage';
 import RepositoryTitle from './RepositoryTitle';
 
 export default function Repository(props) {
-  const {name, description, html_url, homepage, updated_at, languages_url} =
-    props.data;
+  const {
+    name,
+    description,
+    html_url,
+    homepage,
+    updated_at,
+    languages_url,
+    topics,
+  } = props.data;
 
   const githubUrl = html_url;
   const homepageUrl = homepage;
@@ -38,7 +45,12 @@ export default function Repository(props) {
 
   return (
     <CardContent className='repository-container' sx={{p: 0, m: 0}}>
-      <RepositoryTitle title={name} url={githubUrl} updatedDate={updated_at} />
+      <RepositoryTitle
+        title={name}
+        url={githubUrl}
+        updatedDate={updated_at}
+        topics={topics}
+      />
       <Typography sx={{mb: 4}}>
         {description === null ? `🛠 I'm working on it... 😊 🛠` : description}
       </Typography>

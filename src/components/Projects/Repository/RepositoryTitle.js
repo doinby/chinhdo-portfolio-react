@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {Link, Typography} from '@mui/material';
-import {Box} from '@mui/system';
+import {Box, typography} from '@mui/system';
 
 export default function RepositoryTitle(props) {
-  const {title, updatedDate, url} = props;
+  const {title, updatedDate, url, topics} = props;
   const githubPageUrl = 'https://github.com/doinby';
 
   function getUpdatedDate(string) {
@@ -28,9 +28,19 @@ export default function RepositoryTitle(props) {
           {title}
         </Link>
       </Box>
-      <Typography variant='repositoryDate'>
-        Updated on: {getUpdatedDate(updatedDate)}
-      </Typography>
+      <Box>
+        <Typography variant='body1'>
+          Updated on: {getUpdatedDate(updatedDate)}
+        </Typography>
+        <Typography
+          variant='body1'
+          sx={{display: topics.length === 0 ? 'none' : 'block'}}
+        >
+          {topics.length === 0
+            ? ''
+            : `Tech Stacks: ${topics.map((topic) => ` ${topic}`)}`}
+        </Typography>
+      </Box>
     </Box>
   );
 }

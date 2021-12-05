@@ -9,7 +9,7 @@ export default function Footer(props) {
   return (
     <footer>
       <Divider />
-      <Typography variant='body1' sx={sx}>
+      <Typography variant='body1' sx={{...sx, textAlign: 'center'}}>
         © 2021 Chinh Do
       </Typography>
     </footer>
