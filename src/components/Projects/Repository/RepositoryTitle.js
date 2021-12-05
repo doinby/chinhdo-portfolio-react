@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Link, Typography} from '@mui/material';
-import {Box, typography} from '@mui/system';
+import {Box} from '@mui/system';
 
 export default function RepositoryTitle(props) {
   const {title, updatedDate, url, topics} = props;
