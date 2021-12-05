@@ -11,7 +11,7 @@ import '../App.css';
 
 let theme = createTheme({
   palette: {
-    type: 'light',
+    mode: 'light',
     primary: {
       main: '#FD510C',
     },
@@ -30,7 +30,7 @@ let theme = createTheme({
     success: {
       main: '#129277',
     },
-    divider: 'rgba(253,81,12,0.4)',
+    // divider: 'rgba(253,81,12,0.4)',
   },
   typography: {
     h1: {

@@ -47,7 +47,7 @@ export default function Header(props) {
             Link 2
           </Link>
         </MenuItem> */}
-        <MenuItem component='Link' onClick={toggleDarkMode}>
+        <MenuItem onClick={toggleDarkMode}>
           {isDarkMode ? (
             <LightModeIcon color='primary' />
           ) : (
