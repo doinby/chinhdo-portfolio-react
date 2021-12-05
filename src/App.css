@@ -19,6 +19,8 @@ body #root {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  line-height: 1.6rem;
+  text-underline-offset: 0.25rem;
 }
 body main {
   -webkit-box-flex: 1;

@@ -6,15 +6,17 @@ import Repository from './Repository/Repository';
 
 export default function Project(props) {
   const {id, path} = props;
-  console.log('path:', path);
 
   const BASE_URL = 'https://api.github.com/repos/doinby';
+  const token = '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';
 
   const [githubData, setGithubData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(BASE_URL + path)
+    fetch(BASE_URL + path, {
+      header: {Authorization: `token ${token}`},
+    })
       .then((response) => response.json())
       .then((data) => {
         setGithubData(data);

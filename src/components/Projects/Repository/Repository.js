@@ -17,8 +17,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import RepoLanguages from './RepositoryLanguage';
 import RepositoryTitle from './RepositoryTitle';
 
-import './Repository.css';
-
 export default function Repository(props) {
   const {name, description, html_url, homepage, updated_at, languages_url} =
     props.data;
@@ -50,7 +48,7 @@ export default function Repository(props) {
       >
         {isLoading ? 'Loading...' : <RepoLanguages languages={languages} />}
       </Box>
-      <Divider sx={{mb: 4}} />
+      {/* <Divider sx={{mb: 4}} /> */}
       <CardActions
         className='button-container'
         sx={{

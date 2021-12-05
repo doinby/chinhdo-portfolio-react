@@ -13,7 +13,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header ul.MuiList-root {
+header ul#header-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

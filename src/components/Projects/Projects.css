@@ -7,8 +7,7 @@ section#projects-section {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
-ul.projects-container {
+section#projects-section ul.projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +16,38 @@ ul.projects-container {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-ul.projects-container li {
+section#projects-section ul.projects-container li {
   display: block;
-  width: auto;
+}
+section#projects-section div.repository-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#projects-section div.repository-container div.repository-language-container,
+section#projects-section div.repository-container div.title-links,
+section#projects-section div.repository-container div.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+section#projects-section div.repository-container div.repository-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#projects-section div.repository-container div.title-links a {
+  line-height: 1.6rem;
 }

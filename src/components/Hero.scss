@@ -8,6 +8,10 @@ div#profile-card {
   div#profile-card-detail {
     @include flex(column);
     max-width: 100%;
+
+    * {
+      line-height: $lineHeight;
+    }
   }
 
   span#down-under {

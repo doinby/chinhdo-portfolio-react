@@ -21,6 +21,8 @@ body {
   #root {
     @include flex(column);
     height: 100%;
+    line-height: $lineHeight;
+    text-underline-offset: 0.25rem;
   }
 
   main {

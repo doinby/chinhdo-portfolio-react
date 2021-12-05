@@ -13,13 +13,15 @@ export default function Projects(props) {
 
   return (
     <Container id={id} component={component} sx={sx}>
-      <Typography variant='h2'>Projects I've worked on:</Typography>
+      <Typography variant='h2' sx={{mb: 8, textAlign: 'center'}}>
+        Projects I've worked on:
+      </Typography>
       <List
         className='projects-container'
-        sx={{gap: 8, flexWrap: 'wrap', placeContent: 'center'}}
+        sx={{gap: 8, p: 0, flexWrap: 'wrap', placeContent: 'center'}}
       >
         {projectDatas.map((path, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} sx={{p: 0, width: '40%'}}>
             <Project key={index} id={index} path={path} />
           </ListItem>
         ))}

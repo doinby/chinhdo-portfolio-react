@@ -2,12 +2,33 @@
 
 section#projects-section {
   @include flex(column);
-}
 
-ul.projects-container {
-  @include flex(row);
-  li {
-    display: block;
-    width: auto;
+  ul.projects-container {
+    @include flex(row);
+
+    li {
+      display: block;
+    }
+  }
+
+  div.repository-container {
+    @include flex(column);
+
+    div.repository-language-container,
+    div.title-links,
+    div.button-container {
+      @include flex(row);
+    }
+
+    div.repository-title-container {
+      @include flex(column);
+      // line-height: 200%;
+    }
+
+    div.title-links {
+      a {
+        line-height: $lineHeight;
+      }
+    }
   }
 }

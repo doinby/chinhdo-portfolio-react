@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import {Link as RouterLink} from 'react-router-dom';
 
-import {Link, MenuItem, MenuList} from '@mui/material';
+import {Link, ListItem, MenuItem, MenuList} from '@mui/material';
 import {Box} from '@mui/system';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
@@ -11,7 +11,7 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import './Header.css';
 
 export default function Header(props) {
-  const {configs} = props;
+  const {sx} = props.configs;
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   function toggleDarkMode(event) {
@@ -20,7 +20,7 @@ export default function Header(props) {
   }
 
   return (
-    <Box component='header' sx={{paddingY: 1}}>
+    <Box component='header' sx={sx}>
       <Link
         variant='h1'
         component={RouterLink}
@@ -31,7 +31,12 @@ export default function Header(props) {
       >
         doinby.co
       </Link>
-      <MenuList>
+      <MenuList id='header-links' sx={{paddingY: '0 !important', gap: 2}}>
+        <ListItem>
+          <Link href='mailto:chinh@doinby.co' underline='hover'>
+            Contact
+          </Link>
+        </ListItem>
         {/* <MenuItem>
           <Link to='/' component={RouterLink} underline='hover'>
             Link 1
@@ -42,7 +47,7 @@ export default function Header(props) {
             Link 2
           </Link>
         </MenuItem> */}
-        <MenuItem variant='Button' onClick={toggleDarkMode}>
+        <MenuItem component='Link' onClick={toggleDarkMode}>
           {isDarkMode ? (
             <LightModeIcon color='primary' />
           ) : (

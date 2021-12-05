@@ -21,12 +21,12 @@ export default function App() {
   const isIpadScreenLess = useMediaQuery(theme.breakpoints.down('md'));
 
   const headerFooterConfigs = {
-    sx: {marginY: 6},
+    sx: {marginY: 4},
   };
 
   const sectionConfigs = {
     component: 'section',
-    sx: {marginY: 8, display: 'inline-block'},
+    sx: {marginY: 12, display: 'inline-block'},
   };
 
   return (

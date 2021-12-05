@@ -19,6 +19,9 @@ div#profile-card div#profile-card-detail {
           flex-direction: column;
   max-width: 100%;
 }
+div#profile-card div#profile-card-detail * {
+  line-height: 1.6rem;
+}
 div#profile-card span#down-under {
   display: inline-block;
   -webkit-transform: scale(1, -1);
