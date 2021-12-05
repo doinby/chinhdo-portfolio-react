@@ -3,7 +3,7 @@ const projectDatas = [
   '/currency-conversion-react',
   '/ready-red-p-driving-school',
   // '/google-keep-scrimba',
-  // '/FCC-FoodGiving',
+  '/foodgiving-npo',
 ];
 
 export default projectDatas;
