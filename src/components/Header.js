@@ -47,13 +47,13 @@ export default function Header(props) {
             Link 2
           </Link>
         </MenuItem> */}
-        <MenuItem onClick={toggleDarkMode}>
+        {/* <MenuItem onClick={toggleDarkMode}>
           {isDarkMode ? (
             <LightModeIcon color='primary' />
           ) : (
             <DarkModeOutlinedIcon color='primary' />
           )}
-        </MenuItem>
+        </MenuItem> */}
       </MenuList>
     </Box>
   );

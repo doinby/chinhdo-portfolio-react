@@ -10,7 +10,7 @@ export default function Footer(props) {
     <footer>
       <Divider />
       <Typography variant='body1' sx={sx}>
-        'C' 2021 Chinh Do
+        © 2021 Chinh Do
       </Typography>
     </footer>
   );

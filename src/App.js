@@ -1,10 +1,11 @@
 import React from 'react';
 
 // Custom Theme
-import theme from '../src/theme/theme';
+import defaultTheme from '../src/theme/theme';
 import {ThemeProvider} from '@mui/material/styles';
 
 // MUI Components
+import {createTheme} from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {Container, CssBaseline} from '@mui/material';
 
@@ -16,11 +17,9 @@ import Footer from './components/Footer';
 
 // CSS
 import './App.css';
-import {createTheme} from '@mui/system';
-import {deepmerge} from '@mui/utils';
 
 export default function App() {
-  const isIpadScreenLess = useMediaQuery(theme.breakpoints.down('md'));
+  const isIpadScreenLess = useMediaQuery(defaultTheme.breakpoints.down('md'));
 
   const headerFooterConfigs = {
     sx: {marginY: 4},
@@ -31,16 +30,8 @@ export default function App() {
     sx: {marginY: 12, display: 'inline-block'},
   };
 
-  // let themeMode = createTheme(deepmerge(theme, {palette: {mode: 'dark'}}));
-  // console.log('themeMode:', themeMode);
-  const newTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-  });
-
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Container fixed sx={{fontFamily: 'MinigapLight'}}>
         <Header configs={headerFooterConfigs} />

@@ -6,10 +6,12 @@ import MinigapLight2 from './fonts/MinigapLight.woff2';
 import MinigapBold from './fonts/MinigapBold.woff';
 import MinigapBold2 from './fonts/MinigapBold.woff2';
 
+// import {ThemeModeConsumer} from './ThemeModeContext';
+
 // Default CSS
 import '../App.css';
 
-let theme = createTheme({
+let defaultTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
@@ -100,4 +102,4 @@ let theme = createTheme({
   },
 });
 
-export default theme = responsiveFontSizes(theme);
+export default defaultTheme = responsiveFontSizes(defaultTheme);
