@@ -64,7 +64,7 @@ export default function Hero(props) {
                 :
               </Typography>
             </Typography>
-            <MyTools />
+            <MyTools isIpadScreenLess={isIpadScreenLess} />
           </Box>
         </CardContent>
       </Card>

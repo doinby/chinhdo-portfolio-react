@@ -14,11 +14,11 @@ import tailwindcssIcon from '../../src/images/dev-tools/tailwindcss.svg';
 import cssIcon from '../../src/images/dev-tools/css-3.svg';
 import firebaseIcon from '../../src/images/dev-tools/firebase.svg';
 
-export default function MyTools() {
+export default function MyTools({isIpadScreenLess}) {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <List id='my-tools' sx={{gap: 2, mt: 1}}>
+    <List id='my-tools' sx={{flexWrap: 'wrap', gap: 2, mt: 1}}>
       <ListItem>
         <img src={javascriptIcon} alt='Javascript Icon' />
       </ListItem>
@@ -43,7 +43,13 @@ export default function MyTools() {
         </Link>
         <List
           id='more-tools'
-          sx={{display: isHidden ? 'none' : 'flex', paddingY: 0, gap: 2}}
+          sx={{
+            display: isHidden ? 'none' : 'flex',
+            flexWrap: 'wrap',
+            width: '100%',
+            paddingY: 0,
+            gap: 2,
+          }}
         >
           {/* <ListItem>
             <img src={cssIcon} alt='CSS Icon' />
